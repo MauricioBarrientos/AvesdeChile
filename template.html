@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aves de Chile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+        .bird-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .bird-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 15px;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+        .bird-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .bird-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .bird-card:hover img {
+            transform: scale(1.1); /* Zoom de la imagen */
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #555;
+        }
+        p {
+            color: #777;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aves de Chile</h1>
+    <div class="bird-container">
+        {% for bird in birds %}
+        <div class="bird-card">
+            <img src="{{ bird.images.main }}" alt="Imagen de {{ bird.name.spanish }}">
+            <h2>{{ bird.name.spanish }}</h2>
+            <p>{{ bird.name.english }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

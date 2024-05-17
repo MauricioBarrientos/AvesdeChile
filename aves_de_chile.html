@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aves de Chile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+        .bird-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .bird-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 15px;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+        .bird-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .bird-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .bird-card:hover img {
+            transform: scale(1.1); /* Zoom de la imagen */
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #555;
+        }
+        p {
+            color: #777;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aves de Chile</h1>
+    <div class="bird-container">
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3099/17082018024245aguilucho_chico_tomas_rivas_web.200x0.jpg" alt="Imagen de Aguilucho Chico">
+            <h2>Aguilucho Chico</h2>
+            <p>White-throated Hawk</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3102/18082018072023pato_juarjual_pedro_valencia_web.200x0.jpg" alt="Imagen de Pato Juarjual">
+            <h2>Pato Juarjual</h2>
+            <p>Crested Duck</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3105/17082018103640cisne_coscoroba_alejandro_labranque_3_web.200x0.jpg" alt="Imagen de Cisne Coscoroba">
+            <h2>Cisne Coscoroba</h2>
+            <p>Coscoroba Swan</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3109/13082018073638gaviota_austral_paula_de_marco_web.200x0.jpg" alt="Imagen de Gaviota  Austral">
+            <h2>Gaviota  Austral</h2>
+            <p>Dolphin Gull</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3111/18082018074355perdiz_chilena_pedro_valencia_web.200x0.jpg" alt="Imagen de Perdiz chilena">
+            <h2>Perdiz chilena</h2>
+            <p>Chilean Tinamou</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3115/13082018100708tucuquere_camilo_maldonado_marin_web.200x0.jpg" alt="Imagen de Tucúquere">
+            <h2>Tucúquere</h2>
+            <p>Magellanic Horned Owl</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3118/04082018091522gaviota_dominicana_leslie_brackenridge_b.200x0.jpg" alt="Imagen de Gaviota Dominicana">
+            <h2>Gaviota Dominicana</h2>
+            <p>Kelp Gull</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3121/18082018075423perrito_pedro_valencia_web.200x0.jpg" alt="Imagen de Perrito">
+            <h2>Perrito</h2>
+            <p>Black-necked Stilt</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3124/06082018101359pilpilen_leslie_brackenridge_b.200x0.jpg" alt="Imagen de Pilpilén">
+            <h2>Pilpilén</h2>
+            <p>American Oystercatcher</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3126/13082018101547zarapito_pico_recto_leslie_brackenridge_web.200x0.jpg" alt="Imagen de Zarapito de pico recto">
+            <h2>Zarapito de pico recto</h2>
+            <p>Hudsonian Godwit</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3128/28082018064904garza_grande_gerardo_carinao_web.200x0.jpg" alt="Imagen de Garza grande">
+            <h2>Garza grande</h2>
+            <p>Great White Egret</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3131/17082018025342blanquillo_pedro_valencia_web.200x0.jpg" alt="Imagen de Blanquillo">
+            <h2>Blanquillo</h2>
+            <p>Southern Silvery Grebe</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3134/19082018082146fardela_negra_marcos_baumann_web.200x0.jpg" alt="Imagen de Fardela Negra">
+            <h2>Fardela Negra</h2>
+            <p>Sooty Shearwater</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3136/13082018092804tapaculo_andre_vielma_web.200x0.jpg" alt="Imagen de Tapaculo">
+            <h2>Tapaculo</h2>
+            <p>White-throated Tapaculo</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3139/13082018083521picaflor_juan_fernandez_camilo_maldonado_web.200x0.jpg" alt="Imagen de Picaflor de Juan Fernández">
+            <h2>Picaflor de Juan Fernández</h2>
+            <p>Juan Fernandez Firecrown</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3142/12082018072529bandurria_camilo_maldonado_marin_web.200x0.jpg" alt="Imagen de Bandurria">
+            <h2>Bandurria</h2>
+            <p>Black-faced Ibis</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3146/18082018100656tortolita_cordillerana_pedro_valencia_web.200x0.jpg" alt="Imagen de Tortolita Cordillerana">
+            <h2>Tortolita Cordillerana</h2>
+            <p>Black-winged Ground-dove</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3149/14092018093435.200x0.jpg" alt="Imagen de Carancho Cordillerano">
+            <h2>Carancho Cordillerano</h2>
+            <p>Mountain Caracara</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3152/18082018075938peuco_tomas_rivas_web.200x0.jpg" alt="Imagen de Peuco">
+            <h2>Peuco</h2>
+            <p>Harris Hawk</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3155/20082018063719minero_comun_marcos_baumann_web.200x0.jpg" alt="Imagen de Minero Común">
+            <h2>Minero Común</h2>
+            <p>Common Miner</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3159/20082018083653pato_rinconero_hembra_marcos_baumann_web.200x0.jpg" alt="Imagen de Pato Rinconero">
+            <h2>Pato Rinconero</h2>
+            <p>Black-headed Duck</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3161/18082018022058pajaro_plomo_macho_pedro_valencia_web.200x0.jpg" alt="Imagen de Pájaro Plomo">
+            <h2>Pájaro Plomo</h2>
+            <p>Plumbeous Sierra-finch</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3163/07092018035809.200x0.jpg" alt="Imagen de Hued-hued del Sur">
+            <h2>Hued-hued del Sur</h2>
+            <p>Black-throated Huet-huet</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3167/15082018075840cisne_de_cuello_negro_cristian_labranque_web.200x0.jpg" alt="Imagen de Cisne de cuello negro">
+            <h2>Cisne de cuello negro</h2>
+            <p>Black-necked Swan</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3171/17082018103004chirigue_alejandro_labranque_web.200x0.jpg" alt="Imagen de Chirigüe Común">
+            <h2>Chirigüe Común</h2>
+            <p>Grassland Yellow-finch</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3175/21082018044110chorlo_de_magallanes_juan_pablo_rider_web.200x0.jpg" alt="Imagen de Chorlo de Magallanes">
+            <h2>Chorlo de Magallanes</h2>
+            <p>Magellanic plover</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3178/15082018080245gallina_ciega_andre_vielma_web.200x0.jpg" alt="Imagen de Gallina Ciega">
+            <h2>Gallina Ciega</h2>
+            <p>Greater Band-winged Nightjar</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3182/2908201807041621082018042703pinguino_macaroni_liam_quinn_web.200x0.jpg" alt="Imagen de Pingüino Macaroni">
+            <h2>Pingüino Macaroni</h2>
+            <p>Macaroni Penguin</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3184/19082018011819canquen_marcos_baumann_web.200x0.jpg" alt="Imagen de Canquén">
+            <h2>Canquén</h2>
+            <p>Ashy-headed Goose</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3188/18082018081428picurio_pedro_valencia_web.200x0.jpg" alt="Imagen de Picurio">
+            <h2>Picurio</h2>
+            <p>Pied-billed Grebe</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3191/18082018125159gaviotin_sudamericano_pedro_valencia_b.200x0.jpg" alt="Imagen de Gaviotín Sudamericano">
+            <h2>Gaviotín Sudamericano</h2>
+            <p>South American Tern</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3193/01092018082150churrin_de_la_mocha_pio_marshall_web.200x0.jpg" alt="Imagen de Churrín de la Mocha">
+            <h2>Churrín de la Mocha</h2>
+            <p>Ochre-flanked tapaculo</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3196/23082018070709pato_anteojillo2_roderich_barria_web.200x0.jpg" alt="Imagen de Pato Anteojillo">
+            <h2>Pato Anteojillo</h2>
+            <p>Spectacled Duck</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3198/17082018051624chorlo_de_doble_collar_pedro_valencia_web.200x0.jpg" alt="Imagen de Chorlo de Doble Collar">
+            <h2>Chorlo de Doble Collar</h2>
+            <p>Two-banded Plover</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3200/0409201806283701092018091428n-andu_paula_de_marco_web.200x0.jpg" alt="Imagen de Ñandú - Suri">
+            <h2>Ñandú - Suri</h2>
+            <p>Lesser Rhea</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3203/18082018081758piden_pedro_valencia_web.200x0.jpg" alt="Imagen de Pidén">
+            <h2>Pidén</h2>
+            <p>Plumbeous Rail</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3206/18082018101605trile_hembra_pedro_valencia_web.200x0.jpg" alt="Imagen de Trile">
+            <h2>Trile</h2>
+            <p>Yellow-winged Blackbird</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3209/13082018101415zarapito_alain_macias_web.200x0.jpg" alt="Imagen de Zarapito común">
+            <h2>Zarapito común</h2>
+            <p>Whimbrel</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3212/31082018115608pato_cuchara_macho_marcos_baumann_web.200x0.jpg" alt="Imagen de Pato Cuchara">
+            <h2>Pato Cuchara</h2>
+            <p>Red Shoveler</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3214/13082018075740cormoran_imperial_paula_de_marco_web.200x0.jpg" alt="Imagen de Cormorán Imperial">
+            <h2>Cormorán Imperial</h2>
+            <p>Imperial Shag</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3217/20082018041944cormoran_de_las_rocas_marcos_baumann_web.200x0.jpg" alt="Imagen de Cormorán de las rocas">
+            <h2>Cormorán de las rocas</h2>
+            <p>Rock Shag</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3220/20082018090013pidencito_marcos_baumann_web.200x0.jpg" alt="Imagen de Pidencito">
+            <h2>Pidencito</h2>
+            <p>Black Rail</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3223/07092018035526.200x0.jpg" alt="Imagen de Gaviotín Chico">
+            <h2>Gaviotín Chico</h2>
+            <p>Peruvian Tern</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3225/20082018041211condor_hembra_marcos_baumann_web.200x0.jpg" alt="Imagen de Cóndor">
+            <h2>Cóndor</h2>
+            <p>Andean Condor</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3229/23082018064956pinguino_rey_roderich_barria_web.200x0.jpg" alt="Imagen de Pingüino Rey">
+            <h2>Pingüino Rey</h2>
+            <p>King Penguin</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3231/13082018090508golondrina_alejandra_lopez_web.200x0.jpg" alt="Imagen de Golondrina Chilena">
+            <h2>Golondrina Chilena</h2>
+            <p>Chilean Swallow</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3234/20082018091640salteador_chileno_marcos_baumann_web.200x0.jpg" alt="Imagen de Salteador Chileno">
+            <h2>Salteador Chileno</h2>
+            <p>Chilean Skua</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3236/18082018090512torcaza_tomas_rivas_web.200x0.jpg" alt="Imagen de Torcaza">
+            <h2>Torcaza</h2>
+            <p>Chilean Pigeon</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3239/12092018083102.200x0.jpg" alt="Imagen de Gaviotín Monja">
+            <h2>Gaviotín Monja</h2>
+            <p>Inca Tern</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3241/2908201806510226082018023506lechuza_andres_vejar_web.200x0.jpg" alt="Imagen de Lechuza">
+            <h2>Lechuza</h2>
+            <p>Common Barn-owl</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3244/17082018093403canastero_pedro_valencia_web.200x0.jpg" alt="Imagen de Canastero común">
+            <h2>Canastero común</h2>
+            <p>Dusky-tailed Canastero</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3248/23082018041939chiricoca_barbara_palma_villalobos_web.200x0.jpg" alt="Imagen de Chiricoca">
+            <h2>Chiricoca</h2>
+            <p>Crag Chilia</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3250/18082018022735pato_jergon_chico_pedro_valencia_web.200x0.jpg" alt="Imagen de Pato Jergón Chico">
+            <h2>Pato Jergón Chico</h2>
+            <p>Yellow-billed Teal</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3252/13082018074316chucao_camilo_maldonado_marin_web.200x0.jpg" alt="Imagen de Chucao">
+            <h2>Chucao</h2>
+            <p>Chucao Tapaculo</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3255/13082018075614concon_barbara_palma_web.200x0.jpg" alt="Imagen de Concón">
+            <h2>Concón</h2>
+            <p>Rufous-legged Owl</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3259/01102018093758churrin_barbara_palma_villalobos_web.200x0.jpg" alt="Imagen de Churrín del sur">
+            <h2>Churrín del sur</h2>
+            <p>Andean tapaculo</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3263/20082018064422paloma_de_alas_blancas_marcos_baumann_web.200x0.jpg" alt="Imagen de Paloma de Alas Blancas">
+            <h2>Paloma de Alas Blancas</h2>
+            <p>West Peruvian Dove</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3266/15082018091803picaflor_gigante_alain_macias_2_web.200x0.jpg" alt="Imagen de Picaflor Gigante">
+            <h2>Picaflor Gigante</h2>
+            <p>Giant Hummingbird</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3269/05092018084136bailari-n_chico_pedro_valencia_web.200x0.jpg" alt="Imagen de Bailarín chico común">
+            <h2>Bailarín chico común</h2>
+            <p>Correndera Pipit</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3273/31082018120451perdicita_macho_marcos_baumann_web.200x0.jpg" alt="Imagen de Perdicita">
+            <h2>Perdicita</h2>
+            <p>Least Seedsnipe</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3275/13082018082023huairavo_camilo_web.200x0.jpg" alt="Imagen de Huairavo común">
+            <h2>Huairavo común</h2>
+            <p>Black-crowned Night-heron</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3279/13082018075347cometocino_patagonico_camilo_maldonado_web.200x0.jpg" alt="Imagen de Cometocino patagónico">
+            <h2>Cometocino patagónico</h2>
+            <p>Patagonian Sierra-finch</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3283/14082018122316picaflor_chico_barbara_palma_web.200x0.jpg" alt="Imagen de Picaflor Chico">
+            <h2>Picaflor Chico</h2>
+            <p>Green-backed Firecrown</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3286/07092018033322.200x0.jpg" alt="Imagen de Pingüino Emperador">
+            <h2>Pingüino Emperador</h2>
+            <p>Emperor Penguin</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3288/19082018084032gorrion_macho_pedro_valencia_web.200x0.jpg" alt="Imagen de Gorrión">
+            <h2>Gorrión</h2>
+            <p>House Sparrow</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3291/13082018080642fio_fio_alejandra_lopez_web.200x0.jpg" alt="Imagen de Fío-Fío">
+            <h2>Fío-Fío</h2>
+            <p>White-crested Elaenia</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3295/18082018073655perdicita_cojon__carlos_monteverde_web.200x0.jpg" alt="Imagen de Perdicita Cojón">
+            <h2>Perdicita Cojón</h2>
+            <p>Grey-breasted Seedsnipe</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3298/04082018124450gaviota_de_franklin_leslie_brackenridge_b.200x0.jpg" alt="Imagen de Gaviota de Franklin">
+            <h2>Gaviota de Franklin</h2>
+            <p>Franklin´s Gull</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3301/13082018095042tijeral_camilo_maldonado_marin_web.200x0.jpg" alt="Imagen de Tijeral Común">
+            <h2>Tijeral Común</h2>
+            <p>Plain-mantled Tit-spinetail</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3304/20082018070503pato_gargantillo_macho_marcos_baumann_web.200x0.jpg" alt="Imagen de Pato Gargantillo">
+            <h2>Pato Gargantillo</h2>
+            <p>White-cheeked Pintail</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3306/13082018100624tricahue_camilo_maldonado_marin_web.200x0.jpg" alt="Imagen de Loro Tricahue">
+            <h2>Loro Tricahue</h2>
+            <p>Burrowing Parrot</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3310/27092018121222playero_blanco_leslie_brackenridge_web.200x0.jpg" alt="Imagen de Playero blanco">
+            <h2>Playero blanco</h2>
+            <p>Sanderling</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3312/01092018082657dormilona_de_nuca_rojiza_pedro_valencia_web.200x0.jpg" alt="Imagen de Dormilona de nuca rojiza">
+            <h2>Dormilona de nuca rojiza</h2>
+            <p>Rufous-naped Ground-tyrant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3315/13082018090121saca_tu_real_camilo_maldonado_marin_jpg_web.200x0.jpg" alt="Imagen de Saca-tu-real">
+            <h2>Saca-tu-real</h2>
+            <p>Common Vermilion Flycatcher</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3317/19082018094719rara_hembra_marcos_baumann_web.200x0.jpg" alt="Imagen de Rara">
+            <h2>Rara</h2>
+            <p>Rufous-tailed Plantcutter</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3320/13082018083903pimpollo_camilo_maldonado_web.200x0.jpg" alt="Imagen de Pimpollo">
+            <h2>Pimpollo</h2>
+            <p>White-tufted Grebe</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3322/20082018100949bandurrilla_comun_marcos_baumann_web.200x0.jpg" alt="Imagen de Bandurrilla Común">
+            <h2>Bandurrilla Común</h2>
+            <p>Scale-throated Earthcreeper</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3326/20082018102923chorlo_de_campo_marcos_baumann_web.200x0.jpg" alt="Imagen de Chorlo de Campo">
+            <h2>Chorlo de Campo</h2>
+            <p>Tawny-throated Dotterel</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3329/13082018082259mirlo_camilo_maldonado_marin_web.200x0.jpg" alt="Imagen de Mirlo">
+            <h2>Mirlo</h2>
+            <p>Shiny Cowbird</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3332/17082018100508flamencochileno_carlos_monteverde_web.200x0.jpg" alt="Imagen de Flamenco Chileno">
+            <h2>Flamenco Chileno</h2>
+            <p>Chilean Flamingo</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3335/17082018052831garza_bueyera_pedro_valencia_web.200x0.jpg" alt="Imagen de Garza Bueyera">
+            <h2>Garza Bueyera</h2>
+            <p>Cattle Egret</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3337/17082018051714chorlo_de_collar_pedro_valencia_web.200x0.jpg" alt="Imagen de Chorlo de Collar">
+            <h2>Chorlo de Collar</h2>
+            <p>Collared Plover</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3340/20082018090557playero_grande_marcos_baumann_web.200x0.jpg" alt="Imagen de Playero grande">
+            <h2>Playero grande</h2>
+            <p>Willet</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3344/18082018102348yal_hembra_pedro_valencia_web.200x0.jpg" alt="Imagen de Yal Común">
+            <h2>Yal Común</h2>
+            <p>Mourning Sierra-finch</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3346/2908201806533523082018020319pitio_pablo_gutierrez_web.200x0.jpg" alt="Imagen de Pitío">
+            <h2>Pitío</h2>
+            <p>Chilean Flicker</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3350/2908201807025523082018065517petrel_gigante_antartico_rodrigo_reyes_web.200x0.jpg" alt="Imagen de Petrel Gigante Antártico">
+            <h2>Petrel Gigante Antártico</h2>
+            <p>Southern Giant Petrel</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3352/06082018100456loica.200x0.png" alt="Imagen de Loica">
+            <h2>Loica</h2>
+            <p>Long-tailed Meadowlark</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3355/31082018111212chirigue_dorado_macho_marcos_baumann_web.200x0.jpg" alt="Imagen de Chirigüe Dorado">
+            <h2>Chirigüe Dorado</h2>
+            <p>Greater Yellow Finch</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3358/27092018115149pitotoy_grande__leslie_brackenridge_web.200x0.jpg" alt="Imagen de Pitotoy grande">
+            <h2>Pitotoy grande</h2>
+            <p>Greater Yellowlegs</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3360/13092018013525.200x0.jpg" alt="Imagen de Becasina Pintada">
+            <h2>Becasina Pintada</h2>
+            <p>South American Painted-snipe</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3363/18082018080538peuquito_tomas_rivas_web.200x0.jpg" alt="Imagen de Peuquito">
+            <h2>Peuquito</h2>
+            <p>Chilean Hawk</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3365/13082018085841run_run_camilo_maldonado_web.200x0.jpg" alt="Imagen de Run-run">
+            <h2>Run-run</h2>
+            <p>Spectacled Tyrant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3367/18082018083719pollito_de_mar_tricolor_pedro_valencia_b.200x0.jpg" alt="Imagen de Pollito de Mar Tricolor">
+            <h2>Pollito de Mar Tricolor</h2>
+            <p>Wilson&amp;Prime,s Phalarope</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3369/19082018084655jilguero_comun_macho_marcos_baumann_web.200x0.jpg" alt="Imagen de Jilguero">
+            <h2>Jilguero</h2>
+            <p>Black-chinned Siskin</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3372/18082018011817halcon_perdiguero_pedro_valencia_web.200x0.jpg" alt="Imagen de Halcón Perdiguero">
+            <h2>Halcón Perdiguero</h2>
+            <p>Aplomado Falcon</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3374/2908201807164521082018013452yal_cordillerano_sebastian_saiter_web_.200x0.jpg" alt="Imagen de Yal Cordillerano">
+            <h2>Yal Cordillerano</h2>
+            <p>Yellow-bridled Finch</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3377/19082018012957choroy_marcos_baumann_web.200x0.jpg" alt="Imagen de Loro Choroy">
+            <h2>Loro Choroy</h2>
+            <p>Slender-billed Parakeet</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3380/13082018085312playero_de_las_rompientes_leslie_brackenridge_web.200x0.jpg" alt="Imagen de Playero de las Rompientes">
+            <h2>Playero de las Rompientes</h2>
+            <p>Surfbird</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3382/18082018074020perdicita_cordillerana_pedro_valencia_web.200x0.jpg" alt="Imagen de Perdicita cordillerana">
+            <h2>Perdicita cordillerana</h2>
+            <p>Rufous-bellied Seedsnipe</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3385/23082018011857carpintero_grande_camilo_maldonado_web.200x0.jpg" alt="Imagen de Carpintero Negro">
+            <h2>Carpintero Negro</h2>
+            <p>Magellanic Woodpecker</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3389/21082018050542churrete_acanelado_hernan_linetzky_mc-manus_b.200x0.jpg" alt="Imagen de Churrete Acanelado">
+            <h2>Churrete Acanelado</h2>
+            <p>Buff-winged Cinclodes</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3391/17082018024423aguiluchocolarojiza_tomas_rivas_web.200x0.jpg" alt="Imagen de Aguilucho de Cola Rojiza">
+            <h2>Aguilucho de Cola Rojiza</h2>
+            <p>Rufous-tailed Hawk</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3394/20082018042506dormilona_fraile_marcos_baumann_web.200x0.jpg" alt="Imagen de Dormilona Fraile">
+            <h2>Dormilona Fraile</h2>
+            <p>Ochre-naped Ground-tyrant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3396/23082018060705rayadito_mauricio_gonzalez_web.200x0.jpg" alt="Imagen de Rayadito">
+            <h2>Rayadito</h2>
+            <p>Thorn-tailed Rayadito</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3399/18082018021324nuco_tomas_rivas_web.200x0.jpg" alt="Imagen de Nuco">
+            <h2>Nuco</h2>
+            <p>Short-eared Owl</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3401/17082018024833aguiluchocomun_tomas_rivas_web.200x0.jpg" alt="Imagen de Aguilucho Común">
+            <h2>Aguilucho Común</h2>
+            <p>Red-backed Hawk</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3404/15082018080732zorzal_cristian_labranque_web.200x0.jpg" alt="Imagen de Zorzal">
+            <h2>Zorzal</h2>
+            <p>Austral Thrush</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3408/20082018071600pato_real_macho_marcos_baumann_web.200x0.jpg" alt="Imagen de Pato Real">
+            <h2>Pato Real</h2>
+            <p>Chiloe Wigeon</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3411/18082018020140jote_cabeza_colorada_tomas_rivas_web.200x0.jpg" alt="Imagen de Jote de Cabeza Colorada">
+            <h2>Jote de Cabeza Colorada</h2>
+            <p>Turkey Vulture</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3413/13082018081939huairavillo_camilo_maldonado_web.200x0.jpg" alt="Imagen de Huairavillo">
+            <h2>Huairavillo</h2>
+            <p>Stripe-backed bittern</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3415/18082018082127piquero_carlos_monteverde_web.200x0.jpg" alt="Imagen de Piquero">
+            <h2>Piquero</h2>
+            <p>Peruvian Booby</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3417/13092018013010.200x0.jpg" alt="Imagen de Chincol">
+            <h2>Chincol</h2>
+            <p>Rufous-collared Sparrow</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3420/28082018060139huala_mono_andes_web.200x0.jpg" alt="Imagen de Huala">
+            <h2>Huala</h2>
+            <p>Great Grebe</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3424/15082018080014cometocino_de_gay_andre_vielma_web.200x0.jpg" alt="Imagen de Cometocino de Gay">
+            <h2>Cometocino de Gay</h2>
+            <p>Gray Hooded Sierra-finch</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3427/06082018101025pilpilen_negro_michel_baez_b.200x0.jpg" alt="Imagen de Pilpilén Negro">
+            <h2>Pilpilén Negro</h2>
+            <p>Blackish Oystercatcher</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3429/20082018063420mero_marcos_baumann_web.200x0.jpg" alt="Imagen de Mero">
+            <h2>Mero</h2>
+            <p>Great Shrike-tyrant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3431/13082018073104chorlito_cordillerano_camilo_maldonado_web.200x0.jpg" alt="Imagen de Chorlito Cordillerano">
+            <h2>Chorlito Cordillerano</h2>
+            <p>Diademed Sandpiper-plover</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3435/05092018085443paloma_domestica_gordon_magee_web.200x0.jpg" alt="Imagen de Paloma doméstica">
+            <h2>Paloma doméstica</h2>
+            <p>Rock Dove</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3437/15082018080143diuca_andre_vielma_web.200x0.jpg" alt="Imagen de Diuca">
+            <h2>Diuca</h2>
+            <p>Common Diuca-finch</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3441/20082018101508caiquen_hembra_marcos_baumann_web.200x0.jpg" alt="Imagen de Caiquén">
+            <h2>Caiquén</h2>
+            <p>Upland Goose</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3445/18082018072846pato_rana_pico_ancho_carlos_monteverde_web.200x0.jpg" alt="Imagen de Pato Rana de Pico Ancho">
+            <h2>Pato Rana de Pico Ancho</h2>
+            <p>Andean Duck</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3447/23082018053546churrete_costero_cristian_vergara_web.200x0.jpg" alt="Imagen de Churrete Costero">
+            <h2>Churrete Costero</h2>
+            <p>Seaside Cinclodes</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3449/13082018085555playero_vuelvepiedras_leslie_brackenridge_web.200x0.jpg" alt="Imagen de Playero vuelvepiedras">
+            <h2>Playero vuelvepiedras</h2>
+            <p>Ruddy Turnstone</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3451/18082018010729golondrina_bermeja_pedro_valencia_web.200x0.jpg" alt="Imagen de Golondrina Bermeja">
+            <h2>Golondrina Bermeja</h2>
+            <p>Barn Swallow</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3454/19082018095200tagua_comun_marcos_baumann_web.200x0.jpg" alt="Imagen de Tagua Común">
+            <h2>Tagua Común</h2>
+            <p>Red-gartered Coot</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3456/17082018025610chorlo_chileno_pedro_valencia_web.200x0.jpg" alt="Imagen de Chorlo Chileno">
+            <h2>Chorlo Chileno</h2>
+            <p>Rufous-chested Plover</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3459/22082018122710dormilona_tontita_juvenil_luis_piovani_web.200x0.jpg" alt="Imagen de Dormilona Tontita">
+            <h2>Dormilona Tontita</h2>
+            <p>Dark-faced ground-tyrant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3462/17082018051920colilarga_tomas_rivas_web.200x0.jpg" alt="Imagen de Colilarga">
+            <h2>Colilarga</h2>
+            <p>Des Murs&amp;Prime;s Wiretail</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3465/17082018052311cuervo_del_pantano_pedro_valencia_web.200x0.jpg" alt="Imagen de Cuervo de Pantano">
+            <h2>Cuervo de Pantano</h2>
+            <p>White-faced Ibis</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3467/20082018102307chorlo_artico_marcos_baumann_web.200x0.jpg" alt="Imagen de Chorlo Ártico">
+            <h2>Chorlo Ártico</h2>
+            <p>Grey Plover</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3470/23082018055733trabajador_antonio_maureira_web.200x0.jpg" alt="Imagen de Trabajador">
+            <h2>Trabajador</h2>
+            <p>Wren-like Rushbird</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3473/18082018080945picaflor_del_norte_hembra_pedro_valencia_web.200x0.jpg" alt="Imagen de Picaflor del Norte">
+            <h2>Picaflor del Norte</h2>
+            <p>Oasis Hummingbird</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3475/18082018101231traro_pedro_valencia_web.200x0.jpg" alt="Imagen de Traro o Carancho Común">
+            <h2>Traro o Carancho Común</h2>
+            <p>Southern Caracara</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3478/05092018084208becacina_comu-n_pio_marshall_web.200x0.jpg" alt="Imagen de Becasina Común">
+            <h2>Becasina Común</h2>
+            <p>South American Snipe</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3481/18082018102755yeco_carlos_monteverde_web.200x0.jpg" alt="Imagen de Cormorán Yeco">
+            <h2>Cormorán Yeco</h2>
+            <p>Neotropical Cormorant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3485/23082018064725pilpilen_austral_rodrigo_reyes_web.200x0.jpg" alt="Imagen de Pilpilén Austral">
+            <h2>Pilpilén Austral</h2>
+            <p>Magellanic Oystercatcher</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3487/18082018085124rayador_pedro_valencia_web.200x0.jpg" alt="Imagen de Rayador">
+            <h2>Rayador</h2>
+            <p>Black Skimmer</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3490/2908201806492522082018090051caiti_ximena_olivares_web.200x0.jpg" alt="Imagen de Caití">
+            <h2>Caití</h2>
+            <p>Andean Avocet</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3494/05092018090152tiuque_sebastian_saiter_web.200x0.jpg" alt="Imagen de Tiuque">
+            <h2>Tiuque</h2>
+            <p>Chimango Caracara</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3497/01102018093553pinguuino_de_penacho_amarillo_russell_scott_web.200x0.jpg" alt="Imagen de Pingüino de Penacho Amarillo">
+            <h2>Pingüino de Penacho Amarillo</h2>
+            <p>Southern Rockhopper Penguin</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3499/18082018020928jote_de_cabeza_negra_tomas_rivas_web.200x0.jpg" alt="Imagen de Jote de Cabeza Negra">
+            <h2>Jote de Cabeza Negra</h2>
+            <p>American Black Vulture</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3501/23082018014912carpinterito_camilo_maldonado_web.200x0.jpg" alt="Imagen de Carpinterito">
+            <h2>Carpinterito</h2>
+            <p>Striped Woodpecker</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3505/21082018055319churrete_de_alas_blancas_bruno_conjeaud_web.200x0.jpg" alt="Imagen de Churrete de alas blancas">
+            <h2>Churrete de alas blancas</h2>
+            <p>White-winged cinclodes</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3507/25092018063241cachana_camilo_maldonado_web.200x0.jpg" alt="Imagen de Cachaña">
+            <h2>Cachaña</h2>
+            <p>Austral parakeet</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3510/26082018041035pato_cortacorrientes_hembra_niccolo_cantarutti_web.200x0.jpg" alt="Imagen de Pato Cortacorrientes">
+            <h2>Pato Cortacorrientes</h2>
+            <p>Torrent Duck</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3512/01092018085900tordo_pio_marshall_web.200x0.jpg" alt="Imagen de Tordo">
+            <h2>Tordo</h2>
+            <p>Austral Blackbird</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3515/20082018100543albatros_de_ceja_negra_marcos_baumann_web.200x0.jpg" alt="Imagen de Albatros de ceja negra">
+            <h2>Albatros de ceja negra</h2>
+            <p>Black browed albatross (Black-browed mollymawk)</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3518/05092018084910comesebo_grande_andres_vejar_web.200x0.jpg" alt="Imagen de Comesebo Grande">
+            <h2>Comesebo Grande</h2>
+            <p>White-throated Tree-runner</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3522/09082018114457bailarin_camilo_maldonado_web.200x0.jpg" alt="Imagen de Bailarín">
+            <h2>Bailarín</h2>
+            <p>Whited-tailed Kite.</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3526/13082018075511cometocino_del_norte_camilo_web.200x0.jpg" alt="Imagen de Cometocino del Norte">
+            <h2>Cometocino del Norte</h2>
+            <p>Black-hooded Sierra-finch</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3530/13082018080441diucon_barbara_palma_web.200x0.jpg" alt="Imagen de Diucón">
+            <h2>Diucón</h2>
+            <p>Fire-eyed Diucon</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3533/19082018013328codorniz_hembra_y_macho_marcos_baumann_web.200x0.jpg" alt="Imagen de Codorniz">
+            <h2>Codorniz</h2>
+            <p>California Quail</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3536/21082018094922tortolita_cuyana_marcos_baumann_web.200x0.jpg" alt="Imagen de Tortolita cuyana">
+            <h2>Tortolita cuyana</h2>
+            <p>Picui Dove</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3538/01092018085221pollito_mar_rojizo_pio_marshall_web.200x0.jpg" alt="Imagen de Pollito de Mar Rojizo">
+            <h2>Pollito de Mar Rojizo</h2>
+            <p>Red Phalarope</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3540/27092018092920perdiz_copetona_2_jorge_chamia_web.200x0.jpg" alt="Imagen de Perdiz copetona / Martineta">
+            <h2>Perdiz copetona / Martineta</h2>
+            <p>Elegant Crested Tinamou</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3542/18082018072436pato_negro_macho_pedro_valencia_web.200x0.jpg" alt="Imagen de Pato Negro">
+            <h2>Pato Negro</h2>
+            <p>Rosy-billed Pochard</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3544/27092018114406pitotoy_chico_leslie_brackenridge__089tfan04_web.200x0.jpg" alt="Imagen de Pitotoy Chico">
+            <h2>Pitotoy Chico</h2>
+            <p>Lesser Yellowlegs</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3546/31082018112715cotorra_argentina_marcos_baumann_web.200x0.jpg" alt="Imagen de Cotorra Argentina">
+            <h2>Cotorra Argentina</h2>
+            <p>Monk Parakeet</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3549/14082018073313chercaan_bp.200x0.jpg" alt="Imagen de Chercán">
+            <h2>Chercán</h2>
+            <p>Southern House Wren</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3553/21082018011740albatros_errrante_liam_quinn_web.200x0.jpg" alt="Imagen de Albatros errante">
+            <h2>Albatros errante</h2>
+            <p>Wandering Albatross</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3556/22082018052943cernicalo_camilo_maldonado_marin_web.200x0.jpg" alt="Imagen de Cernícalo">
+            <h2>Cernícalo</h2>
+            <p>American Kestrel</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3559/19082018082620garza_chica_pedro_valencia_web.200x0.jpg" alt="Imagen de Garza Chica">
+            <h2>Garza Chica</h2>
+            <p>Snowy Egret</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3561/18082018071636pato_jergon_grande_pedro_valencia_web.200x0.jpg" alt="Imagen de Pato Jergón Grande">
+            <h2>Pato Jergón Grande</h2>
+            <p>Yellow-billed Pintail</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3564/20082018043214jilguero_cordillerano_marcos_baumann_web.200x0.jpg" alt="Imagen de Jilguero cordillerano">
+            <h2>Jilguero cordillerano</h2>
+            <p>Yellow-rumped Siskin</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3566/13082018100923turca_camilo_maldonado_marin_web.200x0.jpg" alt="Imagen de Turca">
+            <h2>Turca</h2>
+            <p>Moustached Turca</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3569/21082018094156tagua_chica_marcos_baumann_web.200x0.jpg" alt="Imagen de Tagua Chica">
+            <h2>Tagua Chica</h2>
+            <p>White-winged Coot</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3571/18082018124343gaviotin_elegante_pedro_valencia_web.200x0.jpg" alt="Imagen de Gaviotín Elegante">
+            <h2>Gaviotín Elegante</h2>
+            <p>Elegant Tern</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3573/23082018071137canquen_colorado_roderich_barria_web.200x0.jpg" alt="Imagen de Canquén Colorado">
+            <h2>Canquén Colorado</h2>
+            <p>Ruddy-headed Goose</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3576/18082018123916gaviota_andina_carlos_monteverde_web.200x0.jpg" alt="Imagen de Gaviota Andina">
+            <h2>Gaviota Andina</h2>
+            <p>Andean Gull</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3579/13082018075128colegial_barbara_palma_villalobosjpg_web.200x0.jpg" alt="Imagen de Colegial">
+            <h2>Colegial</h2>
+            <p>Austral Negrito</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3582/18082018015505halcon_peregrino_carlos_monteverde_web.200x0.jpg" alt="Imagen de Halcón Peregrino">
+            <h2>Halcón Peregrino</h2>
+            <p>Peregrine Falcon</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3584/20082018100118aguila_pescadora_marcos_baumann_web.200x0.jpg" alt="Imagen de Águila Pescadora">
+            <h2>Águila Pescadora</h2>
+            <p>Osprey</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3587/20082018095811aguila_mora_marcos_baumann_web.200x0.jpg" alt="Imagen de Águila mora">
+            <h2>Águila mora</h2>
+            <p>Black-chested Buzzard-Eagle</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3591/18082018101953vari_pedro_valencia_web.200x0.jpg" alt="Imagen de Vari">
+            <h2>Vari</h2>
+            <p>Cinereous Harrier</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3594/13082018080235lile_camilo_maldonado_web.200x0.jpg" alt="Imagen de Cormorán Lile">
+            <h2>Cormorán Lile</h2>
+            <p>Red-legged Cormorant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3596/19082018083502gaviotin_piquerito_marcos_baumann_web.200x0.jpg" alt="Imagen de Gaviotín Piquerito">
+            <h2>Gaviotín Piquerito</h2>
+            <p>Snowy-crowned Tern</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3598/13082018101301viudita_barbara_palma_web.200x0.jpg" alt="Imagen de Viudita">
+            <h2>Viudita</h2>
+            <p>Patagonian Tyrant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3601/13082018080840garza_cuca_barbara_palma_villalobos_web.200x0.jpg" alt="Imagen de Garza Cuca">
+            <h2>Garza Cuca</h2>
+            <p>Cocoi Heron</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3604/15082018080535tenca_andre_vielma_web.200x0.jpg" alt="Imagen de Tenca">
+            <h2>Tenca</h2>
+            <p>Chilean Mockingbird</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3607/18082018085636taguita_pedro_valencia_web.200x0.jpg" alt="Imagen de Taguita">
+            <h2>Taguita</h2>
+            <p>Spot-flanked Gallinule</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3609/2908201806343226082018032911parina_grande_ricardo_bitran_b.200x0.jpg" alt="Imagen de Parina Grande">
+            <h2>Parina Grande</h2>
+            <p>Andean Flamingo</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3612/18082018100202tortola_comun_pedro_valencia_web.200x0.jpg" alt="Imagen de Tórtola Común">
+            <h2>Tórtola Común</h2>
+            <p>Eared Dove</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3615/22082018083952tagua_frente_roja_pablo_gutierrez_web.200x0.jpg" alt="Imagen de Tagua de Frente Roja">
+            <h2>Tagua de Frente Roja</h2>
+            <p>Red-fronted Coot</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3618/13082018092703sietecolores_camilo_web.200x0.jpg" alt="Imagen de Sietecolores">
+            <h2>Sietecolores</h2>
+            <p>Many-colored Rush-tyrant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3621/23082018065905pato_rana__de__pico__delgado__macho_rodrigo_reyes.200x0.jpg" alt="Imagen de Pato Rana de Pico Delgado">
+            <h2>Pato Rana de Pico Delgado</h2>
+            <p>Lake Duck</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3623/13082018085643queltehue_camilo_maldonado_web.200x0.jpg" alt="Imagen de Queltehue / Treile">
+            <h2>Queltehue / Treile</h2>
+            <p>Southern Lapwing</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3626/20082018065818pato_capuchino_marcos_baumann_web.200x0.jpg" alt="Imagen de Pato Capuchino">
+            <h2>Pato Capuchino</h2>
+            <p>Silver Teal</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3628/17082018095838dormilonacejablanca_carlos_monteverde_web.200x0.jpg" alt="Imagen de Dormilona de Ceja Blanca">
+            <h2>Dormilona de Ceja Blanca</h2>
+            <p>White-browed Ground-tyrant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3630/18082018073325pelicano_comun_pedro_valencia_web.200x0.jpg" alt="Imagen de Pelícano Común">
+            <h2>Pelícano Común</h2>
+            <p>Peruvian Pelican</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3632/2908201807102021082018045357gaviotin_boreal_gary_vause_web.200x0.jpg" alt="Imagen de Gaviotín Boreal">
+            <h2>Gaviotín Boreal</h2>
+            <p>Common Tern</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3634/13082018092252pinguino_camilo_maldonado_web.200x0.jpg" alt="Imagen de Pingüino de Humboldt">
+            <h2>Pingüino de Humboldt</h2>
+            <p>Humboldt Penguin</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3637/19082018094050platero_hembra_marcos_baumann_web.200x0.jpg" alt="Imagen de Platero">
+            <h2>Platero</h2>
+            <p>Band-tailed Sierra-finch</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3640/24082018043244carancas_roderich_barria_web.200x0.jpg" alt="Imagen de Caranca">
+            <h2>Caranca</h2>
+            <p>Kelp Goose</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3643/23082018064205quetru_no_volador_macho_rodrigo_reyes_web.200x0.jpg" alt="Imagen de Quetru No Volador">
+            <h2>Quetru No Volador</h2>
+            <p>Flightless  Steamer-duck</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3645/23082018071447becasina_grande_claudia_silva_web.200x0.jpg" alt="Imagen de Becasina grande">
+            <h2>Becasina grande</h2>
+            <p>Fuegian Snipe</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3648/05092018090437churrete_comun_marcos_baumann_web.200x0.jpg" alt="Imagen de Churrete común">
+            <h2>Churrete común</h2>
+            <p>Dark-bellied Cinclodes</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3650/13082018082633pequen_camilo_web.200x0.jpg" alt="Imagen de Pequén">
+            <h2>Pequén</h2>
+            <p>Burrowing Owl</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3653/04082018120235_gaviota_peruana_leslie_brackenridge_b.200x0.jpg" alt="Imagen de Gaviota Peruana">
+            <h2>Gaviota Peruana</h2>
+            <p>Belcher´s Gull</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3655/01092018090613mero_gaucho_juvenil_sergio_moya_web.200x0.jpg" alt="Imagen de Mero Gaucho">
+            <h2>Mero Gaucho</h2>
+            <p>Black-billed Shrike-tyrant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3657/14082018123034picaflor_cordillerano_camilo_maldonado_marin_web.200x0.jpg" alt="Imagen de Picaflor Cordillerano">
+            <h2>Picaflor Cordillerano</h2>
+            <p>White-sided Hillstar</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3659/13082018084920playero_de_baird_leslie_brackenridge_web.200x0.jpg" alt="Imagen de Playero de Baird">
+            <h2>Playero de Baird</h2>
+            <p>Baird s sandpiper</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3662/04082018113001cachudito_bp.200x0.jpg" alt="Imagen de Cachudito">
+            <h2>Cachudito</h2>
+            <p>Tufted Tit-tyrant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3666/01092018083836golondrina_de_dorso_negro_pio_marshall_web.200x0.jpg" alt="Imagen de Golondrina de Dorso Negro">
+            <h2>Golondrina de Dorso Negro</h2>
+            <p>Blue-and-white Swallow</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3668/13082018082750perico_cordillerano_camilo_web.200x0.jpg" alt="Imagen de Perico Cordillerano">
+            <h2>Perico Cordillerano</h2>
+            <p>Mountain Parakeet</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3670/01092018084323golondrina_de_mar_de_collar_pio_marshall_web.200x0.jpg" alt="Imagen de Golondrina de Mar">
+            <h2>Golondrina de Mar</h2>
+            <p>Wilson s storm-petrel</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3672/23082018123925martin_pescador_richard_wolf_web.200x0.jpg" alt="Imagen de Martín Pescador">
+            <h2>Martín Pescador</h2>
+            <p>Ringed Kingfisher</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3675/18082018082601piuquen_pedro_valencia_web.200x0.jpg" alt="Imagen de Piuquén">
+            <h2>Piuquén</h2>
+            <p>Andean Goose</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3679/04082018092450gaviota_garuma_leslie_brackenridge_b.200x0.jpg" alt="Imagen de Gaviota Garuma">
+            <h2>Gaviota Garuma</h2>
+            <p>Grey Gull</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3683/24082018044401guanay_jorge_abarca_web_2.200x0.jpg" alt="Imagen de Guanay">
+            <h2>Guanay</h2>
+            <p>Guanay Cormorant</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3685/04082018123730gaviota_cahuil_leslie_brackenridge_b.200x0.jpg" alt="Imagen de Gaviota Cáhuil">
+            <h2>Gaviota Cáhuil</h2>
+            <p>Brown-hooded Gull</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3688/13082018072628chuncho_camilo_maldonado_marin_web.200x0.jpg" alt="Imagen de Chuncho">
+            <h2>Chuncho</h2>
+            <p>Austral pygmy-owl</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3691/19082018012649chercan_de_lasvegas_marcos_baumann_web.200x0.jpg" alt="Imagen de Chercán de las Vegas">
+            <h2>Chercán de las Vegas</h2>
+            <p>Sedge Wren</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3695/20082018085521picaflor_de_arica_macho_marcos_baumann_web.200x0.jpg" alt="Imagen de Picaflor de Arica">
+            <h2>Picaflor de Arica</h2>
+            <p>Chilean Woodstar</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3698/19082018091938pato_colorado_macho_pedro_valencia_web.200x0.jpg" alt="Imagen de Pato Colorado">
+            <h2>Pato Colorado</h2>
+            <p>Cinnamon Teal</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3700/26082018033455parina_chica_hector_bottai_web.200x0.jpg" alt="Imagen de Parina Chica">
+            <h2>Parina Chica</h2>
+            <p>Puna Flamingo</p>
+        </div>
+        
+        <div class="bird-card">
+            <img src="https://aves.ninjas.cl/api/site/assets/files/3702/28082018011241pinguino_de_magallanes_paula_de_marco_web.200x0.jpg" alt="Imagen de Pingüino de Magallanes">
+            <h2>Pingüino de Magallanes</h2>
+            <p>Magellanic Penguin</p>
+        </div>
+        
+    </div>
+</body>
+</html>
