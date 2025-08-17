@@ -1,12 +1,53 @@
-La asociación de Amantes de los pájaros de Chile ha notado que actualmente no se tiene
-información de los distintos pájaros que pueden ser observados en Chile. Es por eso que les
-gustaría poder entender a manera de prototipo como poder listar muchos de estos
-especímenes. Para ello se le solicita generar un prototipo muy sencillo en el cual se puedan
-observar algunas imágenes de pájaros típicos de Chile junto con su nombre en español e
-inglés. La idea es que esta información pueda ser eventualmente transformada en señaléticas
-bilingües que permitan fomentar el turismo en Chile.
-Para ello se le da acceso a la API 'https://aves.ninjas.cl/api/birds', la cual da
-acceso a una base de datos con la información requerida.
-Se solicita entonces que usted pueda crear un script en Python que permita crear este sitio
-web con los requerimientos solicitados, es decir, un listado con el título Aves de Chile, y cada
-especie registrada con su nombre en inglés y español junto con sus imágenes.
+# Aves de Chile
+
+## Descripción del Proyecto
+
+Este proyecto fue desarrollado para la Asociación de Amantes de los Pájaros de Chile, con el objetivo de crear un catálogo digital de aves que pueden ser observadas en Chile. La aplicación muestra imágenes de aves típicas de Chile junto con información relevante como sus nombres en español e inglés, hábitat, orden, familia y tamaño.
+
+La información presentada puede ser utilizada para crear señaléticas bilingües que fomenten el turismo ornitológico en Chile.
+
+## Características
+
+- Visualización de aves de Chile con imágenes de alta calidad
+- Información detallada de cada ave (nombre en español e inglés, hábitat, orden, familia, tamaño)
+- Búsqueda de aves por nombre en español o inglés
+- Interfaz responsiva y moderna
+- Almacenamiento local de datos para reducir llamadas a la API
+
+## Tecnologías Utilizadas
+
+- Python 3
+- Jinja2 (motor de plantillas)
+- HTML5, CSS3 y JavaScript
+- API de aves.ninjas.cl
+
+## Cómo Ejecutar el Proyecto
+
+1. Asegúrate de tener Python 3 instalado en tu sistema
+2. Instala las dependencias necesarias:
+   ```
+   pip install requests jinja2
+   ```
+3. Ejecuta el script principal:
+   ```
+   python api_aves.py
+   ```
+4. Abre el archivo `aves_de_chile.html` generado en tu navegador web
+
+Alternativamente, puedes iniciar un servidor web local para visualizar la página:
+```
+python -m http.server
+```
+Y luego visitar `http://localhost:8000/aves_de_chile.html` en tu navegador.
+
+## Estructura del Proyecto
+
+- `api_aves.py`: Script principal que obtiene los datos de la API y genera el HTML
+- `template.html`: Plantilla Jinja2 para generar la página web
+- `aves_de_chile.html`: Página web generada con la información de las aves
+- `birds_data.json`: Datos básicos de las aves (generado automáticamente)
+- `birds_details.json`: Datos detallados de las aves (generado automáticamente)
+
+## Fuente de Datos
+
+Los datos son obtenidos de la API pública: [https://aves.ninjas.cl/api/birds](https://aves.ninjas.cl/api/birds)
