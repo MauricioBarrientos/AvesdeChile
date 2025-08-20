@@ -47,6 +47,29 @@
             outline: none;
             transition: border-color 0.3s;
             font-family: 'Montserrat', Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+        
+        .filter-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 10px;
+        }
+        
+        #region-filter {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            background-color: white;
+            min-width: 200px;
+        }
+        
+        label {
+            font-weight: bold;
+            color: #333;
         }
         #search-input:focus {
             border-color: #4CAF50;
@@ -103,6 +126,7 @@
             border-top: 1px solid #eee;
             padding-top: 15px;
             font-size: 0.9em;
+            display: none; /* Ocultar detalles por defecto */
         }
         .bird-details p {
             margin: 5px 0;
@@ -143,6 +167,89 @@
         .back-to-top:hover {
             background-color: #3e8e41;
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+            text-align: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .modal-content h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .modal-details {
+            text-align: left;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .modal-details p {
+            margin: 10px 0;
+        }
+
+        .modal-details strong {
+            color: #4CAF50;
+        }
+
+        .close-button {
+            color: #aaa;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -153,17 +260,21 @@
     
     <div class="search-container">
         <input type="text" id="search-input" placeholder="Buscar aves por nombre en español o inglés...">
+        
     </div>
     
     <div class="bird-container" id="bird-container">
         {% for bird in birds %}
-        <div class="bird-card" data-name-es="{{ bird.name.spanish | lower }}" data-name-en="{{ bird.name.english | lower }}">
-            <img src="{{ bird.images.main }}" alt="Imagen de {{ bird.name.spanish }}">
+        <div class="bird-card" data-name-es="{{ bird.name.spanish | lower }}" data-name-en="{{ bird.name.english | lower }}" data-regions-list="{{ bird.regions|join(',') }}" data-habitat="{{ bird.habitat }}" data-order="{{ bird.order }}" data-family="{{ bird.family }}" data-size="{{ bird.size }}">
+            <img src="{{ bird.image_url if bird.image_url else bird.images.main }}" alt="Imagen de {{ bird.name.spanish }}">
             <h2>{{ bird.name.spanish }}</h2>
             <p>{{ bird.name.english }}</p>
             <div class="bird-details">
                 {% if bird.habitat %}
                 <p><strong>Hábitat:</strong> {{ bird.habitat }}</p>
+                {% endif %}
+                {% if bird.regions %}
+                <p><strong>Regiones:</strong> {{ bird.regions|join(', ') }}</p>
                 {% endif %}
                 {% if bird.order and bird.order != 'No disponible' %}
                 <p><strong>Orden:</strong> {{ bird.order }}</p>
@@ -180,6 +291,22 @@
         <div class="no-results" style="display: none;">No se encontraron aves que coincidan con tu búsqueda</div>
     </div>
     
+    <div id="bird-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-image" src="" alt="Imagen del ave">
+            <h2 id="modal-spanish-name"></h2>
+            <p id="modal-english-name"></p>
+            <div class="modal-details">
+                <p><span id="modal-habitat"></span></p>
+                <p><span id="modal-regions"></span></p>
+                <p><span id="modal-order"></span></p>
+                <p><span id="modal-family"></span></p>
+                <p><span id="modal-size"></span></p>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>© 2023 Aves de Chile - Todos los derechos reservados</p>
         <p>Datos proporcionados por <a href="https://aves.ninjas.cl" style="color: #4CAF50;">aves.ninjas.cl</a></p>
@@ -188,20 +315,25 @@
     <button class="back-to-top" id="back-to-top" title="Volver arriba">↑</button>
     
     <script>
-        // Funcionalidad de búsqueda
+        // Funcionalidad de búsqueda y filtrado
         const searchInput = document.getElementById('search-input');
         const birdCards = document.querySelectorAll('.bird-card');
         const noResults = document.querySelector('.no-results');
         
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase().trim();
+        // Función para filtrar las aves
+        function filterBirds() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
             let resultsFound = false;
             
             birdCards.forEach(card => {
                 const nameEs = card.getAttribute('data-name-es');
                 const nameEn = card.getAttribute('data-name-en');
                 
-                if (nameEs.includes(searchTerm) || nameEn.includes(searchTerm)) {
+                // Verificar si cumple con el filtro de búsqueda por nombre
+                const matchesSearch = nameEs.includes(searchTerm) || nameEn.includes(searchTerm);
+                
+                // Mostrar la tarjeta solo si cumple con el filtro de búsqueda
+                if (matchesSearch) {
                     card.style.display = 'block';
                     resultsFound = true;
                 } else {
@@ -210,7 +342,10 @@
             });
             
             noResults.style.display = resultsFound ? 'none' : 'block';
-        });
+        }
+        
+        // Eventos para activar el filtrado
+        searchInput.addEventListener('input', filterBirds);
         
         // Botón volver arriba
         const backToTopButton = document.getElementById('back-to-top');
@@ -228,6 +363,54 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+
+        // Modal functionality
+        const birdModal = document.getElementById('bird-modal');
+        const closeButton = document.querySelector('.close-button');
+        const modalImage = document.getElementById('modal-image');
+        const modalSpanishName = document.getElementById('modal-spanish-name');
+        const modalEnglishName = document.getElementById('modal-english-name');
+        const modalHabitat = document.getElementById('modal-habitat');
+        const modalRegions = document.getElementById('modal-regions');
+        const modalOrder = document.getElementById('modal-order');
+        const modalFamily = document.getElementById('modal-family');
+        const modalSize = document.getElementById('modal-size');
+
+        birdCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const birdData = {
+                    image_url: card.querySelector('img').src,
+                    spanish_name: card.querySelector('h2').textContent,
+                    english_name: card.querySelector('p').textContent,
+                    habitat: card.getAttribute('data-habitat'),
+                    regions: card.getAttribute('data-regions-list'),
+                    order: card.getAttribute('data-order'),
+                    family: card.getAttribute('data-family'),
+                    size: card.getAttribute('data-size')
+                };
+
+                modalImage.src = birdData.image_url;
+                modalSpanishName.textContent = birdData.spanish_name;
+                modalEnglishName.textContent = birdData.english_name;
+                modalHabitat.textContent = birdData.habitat;
+                modalRegions.textContent = birdData.regions;
+                modalOrder.textContent = birdData.order;
+                modalFamily.textContent = birdData.family;
+                modalSize.textContent = birdData.size;
+
+                birdModal.style.display = 'flex';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            birdModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == birdModal) {
+                birdModal.style.display = 'none';
+            }
         });
     </script>
 </body>
