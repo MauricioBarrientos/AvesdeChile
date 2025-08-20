@@ -13,6 +13,8 @@ La información presentada puede ser utilizada para crear señaléticas bilingü
 - Búsqueda de aves por nombre en español o inglés
 - Interfaz responsiva y moderna
 - Almacenamiento local de datos para reducir llamadas a la API
+- **Visualización de detalles en modal**: Al hacer clic en una tarjeta de ave, se muestra información detallada en una ventana emergente.
+- **Orden aleatorio de aves**: Las aves se muestran en un orden aleatorio cada vez que se genera la página, ofreciendo una experiencia fresca al usuario.
 
 ## Tecnologías Utilizadas
 
@@ -45,6 +47,7 @@ Y luego visitar `http://localhost:8000/aves_de_chile.html` en tu navegador.
 - `api_aves.py`: Script principal que obtiene los datos de la API y genera el HTML
 - `template.html`: Plantilla Jinja2 para generar la página web
 - `aves_de_chile.html`: Página web generada con la información de las aves
+- `images/`: Directorio que almacena las imágenes de las aves descargadas.
 - `birds_data.json`: Datos básicos de las aves (generado automáticamente)
 - `birds_details.json`: Datos detallados de las aves (generado automáticamente)
 
